@@ -1,0 +1,7 @@
+{{ include('includes_header.html') }}
+<h1>¡Buenos días, {{ name }}!</h1>
+<p>This is another page via {{ app.getProtocol() }} on port {{ app.getPort() }}!</p>
+<p>That was greeting number {{ greetingId }}.</p>
+<p><a href="{{ app.url('/') }}">Let's go back</a></p>
+<p>Feel free to change or remove this template.</p>
+{{ include('includes_footer.html') }}
