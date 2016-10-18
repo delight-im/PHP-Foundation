@@ -283,7 +283,7 @@ In order to *display* the messages, which you'll probably want to do in your tem
  * [Bootstrap 3](http://getbootstrap.com/)
 
    ```
-   {{ include('includes/flash/bootstrap-v3.html') }}
+   {% include 'includes/flash/bootstrap-v3.html' %}
    ```
 
 ### Mail
