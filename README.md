@@ -5,6 +5,8 @@ Writing modern PHP applications efficiently
 ## Requirements
 
  * Apache HTTP Server 2.2.0+
+   * `mod_rewrite`
+   * `mod_headers`
  * PHP 5.6.0+
    * Multibyte String extension (`mbstring`)
    * PDO (PHP Data Objects) extension (`pdo`)
