@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "delight-im/auth",
-            "version": "v4.0.1",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delight-im/PHP-Auth.git",
-                "reference": "36b590eb811dfa626e17c1bec57c8dabfd2fa575"
+                "reference": "78a16d8f500e100ea72d33b36ea91ce40af5828b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delight-im/PHP-Auth/zipball/36b590eb811dfa626e17c1bec57c8dabfd2fa575",
-                "reference": "36b590eb811dfa626e17c1bec57c8dabfd2fa575",
+                "url": "https://api.github.com/repos/delight-im/PHP-Auth/zipball/78a16d8f500e100ea72d33b36ea91ce40af5828b",
+                "reference": "78a16d8f500e100ea72d33b36ea91ce40af5828b",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 "login",
                 "security"
             ],
-            "time": "2016-12-01 12:48:48"
+            "time": "2016-12-04 16:27:58"
         },
         {
             "name": "delight-im/cookie",
@@ -131,20 +131,20 @@
         },
         {
             "name": "delight-im/foundation-core",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delight-im/PHP-Foundation-Core.git",
-                "reference": "6fdb2f4cb56f372210a9a26e492c8ec41a2ed6ff"
+                "reference": "4a6f6776a4a04ffad163239e5a6a5aec293a76f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delight-im/PHP-Foundation-Core/zipball/6fdb2f4cb56f372210a9a26e492c8ec41a2ed6ff",
-                "reference": "6fdb2f4cb56f372210a9a26e492c8ec41a2ed6ff",
+                "url": "https://api.github.com/repos/delight-im/PHP-Foundation-Core/zipball/4a6f6776a4a04ffad163239e5a6a5aec293a76f8",
+                "reference": "4a6f6776a4a04ffad163239e5a6a5aec293a76f8",
                 "shasum": ""
             },
             "require": {
-                "delight-im/auth": "^4.0",
+                "delight-im/auth": "^4.1",
                 "delight-im/cookie": "^2.1",
                 "delight-im/db": "^1.0",
                 "delight-im/ids": "^1.0",
@@ -173,7 +173,7 @@
                 "bootstrap",
                 "framework"
             ],
-            "time": "2016-12-01 12:55:01"
+            "time": "2016-12-04 16:32:31"
         },
         {
             "name": "delight-im/http",
