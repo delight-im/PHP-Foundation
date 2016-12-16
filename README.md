@@ -296,8 +296,8 @@ The pre-configured mailing component is always available via the `$app->mail()` 
 $message = $app->mail()->createMessage();
 
 $message->setSubject('This is the subject');
-$message->setFrom(array('john.doe@example.com' => 'John Doe'));
-$message->setTo(array('jane@example.org' => 'Jane Doe'));
+$message->setFrom([ 'john.doe@example.com' => 'John Doe' ]);
+$message->setTo([ 'jane@example.org' => 'Jane Doe' ]);
 $message->setBody('Here is the message');
 
 if ($app->mail()->send($message)) {
