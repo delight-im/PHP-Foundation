@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "96c029761e477702e82e85810df78a01",
-    "content-hash": "b8c47dc3b0f9756f99a7e109a4c07660",
+    "hash": "777d67c809745b6470d4ec4a42b0995e",
+    "content-hash": "caae0ebef0aa8cf4422151cf2671fdba",
     "packages": [
         {
             "name": "delight-im/auth",
@@ -49,21 +49,21 @@
         },
         {
             "name": "delight-im/cookie",
-            "version": "v2.1.0",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delight-im/PHP-Cookie.git",
-                "reference": "3e41e0d44959b59de98722b5b1b1fb83f9f528f3"
+                "reference": "22f2c19750a6ad3dbf69a8ef3ea0e454a8e064fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delight-im/PHP-Cookie/zipball/3e41e0d44959b59de98722b5b1b1fb83f9f528f3",
-                "reference": "3e41e0d44959b59de98722b5b1b1fb83f9f528f3",
+                "url": "https://api.github.com/repos/delight-im/PHP-Cookie/zipball/22f2c19750a6ad3dbf69a8ef3ea0e454a8e064fa",
+                "reference": "22f2c19750a6ad3dbf69a8ef3ea0e454a8e064fa",
                 "shasum": ""
             },
             "require": {
                 "delight-im/http": "^2.0",
-                "php": ">=5.3.0"
+                "php": ">=5.6.0"
             },
             "type": "library",
             "autoload": {
@@ -86,7 +86,7 @@
                 "samesite",
                 "xss"
             ],
-            "time": "2016-11-23 20:09:42"
+            "time": "2016-12-18 20:22:46"
         },
         {
             "name": "delight-im/db",
@@ -131,16 +131,16 @@
         },
         {
             "name": "delight-im/foundation-core",
-            "version": "v1.0.3",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delight-im/PHP-Foundation-Core.git",
-                "reference": "16f1d70b89fc58f30bbbcf324316daabbb42baf1"
+                "reference": "bafdc606199c74b78f9d035e9cd78c2eb8a7ffe0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delight-im/PHP-Foundation-Core/zipball/16f1d70b89fc58f30bbbcf324316daabbb42baf1",
-                "reference": "16f1d70b89fc58f30bbbcf324316daabbb42baf1",
+                "url": "https://api.github.com/repos/delight-im/PHP-Foundation-Core/zipball/bafdc606199c74b78f9d035e9cd78c2eb8a7ffe0",
+                "reference": "bafdc606199c74b78f9d035e9cd78c2eb8a7ffe0",
                 "shasum": ""
             },
             "require": {
@@ -148,7 +148,7 @@
                 "delight-im/cookie": "^2.1",
                 "delight-im/db": "^1.0",
                 "delight-im/ids": "^1.0",
-                "delight-im/router": "^3.0",
+                "delight-im/router": "^3.1",
                 "delight-im/str": "^2.4",
                 "ext-mbstring": "*",
                 "filp/whoops": "^2.1",
@@ -173,7 +173,7 @@
                 "bootstrap",
                 "framework"
             ],
-            "time": "2016-12-16 08:40:49"
+            "time": "2016-12-23 22:59:40"
         },
         {
             "name": "delight-im/http",
@@ -261,16 +261,16 @@
         },
         {
             "name": "delight-im/router",
-            "version": "v3.0.0",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delight-im/PHP-Router.git",
-                "reference": "32dbdd189cc44deb81aa7e3caefc5c10123fe700"
+                "reference": "238ac8b540aba83ceebeb4b8e7f9bd11b48652ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delight-im/PHP-Router/zipball/32dbdd189cc44deb81aa7e3caefc5c10123fe700",
-                "reference": "32dbdd189cc44deb81aa7e3caefc5c10123fe700",
+                "url": "https://api.github.com/repos/delight-im/PHP-Router/zipball/238ac8b540aba83ceebeb4b8e7f9bd11b48652ab",
+                "reference": "238ac8b540aba83ceebeb4b8e7f9bd11b48652ab",
                 "shasum": ""
             },
             "require": {
@@ -294,7 +294,7 @@
                 "router",
                 "routing"
             ],
-            "time": "2016-09-05 18:21:14"
+            "time": "2016-12-23 22:45:42"
         },
         {
             "name": "delight-im/str",
@@ -503,16 +503,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.29.0",
+            "version": "v1.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "74f723e542368ca2080b252740be5f1113ebb898"
+                "reference": "c6ff71094fde15d12398eaba029434b013dc5e59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/74f723e542368ca2080b252740be5f1113ebb898",
-                "reference": "74f723e542368ca2080b252740be5f1113ebb898",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/c6ff71094fde15d12398eaba029434b013dc5e59",
+                "reference": "c6ff71094fde15d12398eaba029434b013dc5e59",
                 "shasum": ""
             },
             "require": {
@@ -525,7 +525,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.29-dev"
+                    "dev-master": "1.30-dev"
                 }
             },
             "autoload": {
@@ -560,7 +560,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-12-13 17:28:18"
+            "time": "2016-12-23 11:06:22"
         },
         {
             "name": "vlucas/phpdotenv",
