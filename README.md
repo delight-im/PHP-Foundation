@@ -331,6 +331,18 @@ If you want to configure the underlying transformation, you simply have to chang
 
 Please refer to the [documentation of the ID obfuscation library](https://github.com/delight-im/PHP-IDs) for information on what constitutes proper values and how to generate them.
 
+### Serving files
+
+You can serve (static) files to the client from your PHP code, e.g. after performing access control:
+
+```php
+$app->serveFile($app->getStoragePath('/photos/314.png'), 'image/png');
+```
+
+Most commonly, this will be used to serve images. If certain files aren't public or cannot be accessed directly for other reasons, thus requiring more dynamic behavior, the helper above will be useful.
+
+If you want to offer files for download, however, e.g. documents or videos, there is another helper that is more suitable (see "File downloads").
+
 ### File downloads
 
 In order to send strings or files to the client and prompt a download, use one of the following methods:
