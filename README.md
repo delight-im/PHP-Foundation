@@ -331,6 +331,18 @@ If you want to configure the underlying transformation, you simply have to chang
 
 Please refer to the [documentation of the ID obfuscation library](https://github.com/delight-im/PHP-IDs) for information on what constitutes proper values and how to generate them.
 
+### Uploading files
+
+Whenever you want to let users upload files to your application, there's a built-in component that does this in a convenient and safe way:
+
+```php
+$upload = $app->upload('/uploads/users/' . $userId . '/avatars');
+$upload->from('my-input-name');
+$upload->save();
+```
+
+For more information on how to use the upload handler, including more advanced controls, please refer to the [documentation of the file upload library](https://github.com/delight-im/PHP-FileUpload#usage).
+
 ### Serving files
 
 You can serve (static) files to the client from your PHP code, e.g. after performing access control:
