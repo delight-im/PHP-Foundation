@@ -101,33 +101,41 @@ $app->input()->get('username'); // equivalent to TYPE_STRING
 $app->input()->get('profileId', TYPE_INT);
 $app->input()->get('disabled', TYPE_BOOL);
 $app->input()->get('weight', TYPE_FLOAT);
+$app->input()->get('message', TYPE_TEXT);
 $app->input()->get('recipientEmail', TYPE_EMAIL);
 $app->input()->get('linkTo', TYPE_URL);
 $app->input()->get('whoisIp', TYPE_IP);
+$app->input()->get('transmission', TYPE_RAW);
 
 $app->input()->post('country'); // equivalent to TYPE_STRING
 $app->input()->post('zipCode', TYPE_INT);
 $app->input()->post('subscribe', TYPE_BOOL);
 $app->input()->post('price', TYPE_FLOAT);
+$app->input()->post('csv', TYPE_TEXT);
 $app->input()->post('newsletterEmail', TYPE_EMAIL);
 $app->input()->post('referringSite', TYPE_URL);
 $app->input()->post('signUpIp', TYPE_IP);
+$app->input()->post('print', TYPE_RAW);
 
 $app->input()->cookie('realName'); // equivalent to TYPE_STRING
 $app->input()->cookie('lastLoginTimestamp', TYPE_INT);
 $app->input()->cookie('hideAds', TYPE_BOOL);
 $app->input()->cookie('cartTotalAmount', TYPE_FLOAT);
+$app->input()->cookie('draft', TYPE_TEXT);
 $app->input()->cookie('friend', TYPE_EMAIL);
 $app->input()->cookie('social', TYPE_URL);
 $app->input()->cookie('antiFraud', TYPE_IP);
+$app->input()->cookie('display', TYPE_RAW);
 
 $app->input()->value($username); // equivalent to TYPE_STRING
 $app->input()->value($profileId, TYPE_INT);
 $app->input()->value($disabled, TYPE_BOOL);
 $app->input()->value($weight, TYPE_FLOAT);
+$app->input()->value($message, TYPE_TEXT);
 $app->input()->value($recipientEmail, TYPE_EMAIL);
 $app->input()->value($linkTo, TYPE_URL);
 $app->input()->value($whoisIp, TYPE_IP);
+$app->input()->value($transmission, TYPE_RAW);
 ```
 
 ### HTML escaping
