@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "caae0ebef0aa8cf4422151cf2671fdba",
+    "content-hash": "4862218658a827a178efd96fc5945b89",
     "packages": [
         {
             "name": "delight-im/auth",
@@ -169,16 +169,16 @@
         },
         {
             "name": "delight-im/foundation-core",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delight-im/PHP-Foundation-Core.git",
-                "reference": "95e2384ca5500044b3b8cf902beb583fe4a5efe0"
+                "reference": "4a7f633b4ecb6eff27467821ad43c14cfdd9e9d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delight-im/PHP-Foundation-Core/zipball/95e2384ca5500044b3b8cf902beb583fe4a5efe0",
-                "reference": "95e2384ca5500044b3b8cf902beb583fe4a5efe0",
+                "url": "https://api.github.com/repos/delight-im/PHP-Foundation-Core/zipball/4a7f633b4ecb6eff27467821ad43c14cfdd9e9d8",
+                "reference": "4a7f633b4ecb6eff27467821ad43c14cfdd9e9d8",
                 "shasum": ""
             },
             "require": {
@@ -212,7 +212,7 @@
                 "bootstrap",
                 "framework"
             ],
-            "time": "2017-03-11T21:13:30+00:00"
+            "time": "2017-04-03T08:09:35+00:00"
         },
         {
             "name": "delight-im/http",
