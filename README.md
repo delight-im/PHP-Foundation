@@ -97,37 +97,37 @@ Both validation and filtering are performed automatically and *correctly typecas
 If a value does not exist or if it's invalid, you're guaranteed to receive `null` as the result. This way, you don't have to check for empty strings, `null`, `false` or invalid formats separately.
 
 ```php
-$app->input()->get('username') // equivalent to TYPE_STRING
-$app->input()->get('profileId', TYPE_INT)
-$app->input()->get('disabled', TYPE_BOOL)
-$app->input()->get('weight', TYPE_FLOAT)
-$app->input()->get('recipientEmail', TYPE_EMAIL)
-$app->input()->get('linkTo', TYPE_URL)
-$app->input()->get('whoisIp', TYPE_IP)
+$app->input()->get('username'); // equivalent to TYPE_STRING
+$app->input()->get('profileId', TYPE_INT);
+$app->input()->get('disabled', TYPE_BOOL);
+$app->input()->get('weight', TYPE_FLOAT);
+$app->input()->get('recipientEmail', TYPE_EMAIL);
+$app->input()->get('linkTo', TYPE_URL);
+$app->input()->get('whoisIp', TYPE_IP);
 
-$app->input()->post('country') // equivalent to TYPE_STRING
-$app->input()->post('zipCode', TYPE_INT)
-$app->input()->post('subscribe', TYPE_BOOL)
-$app->input()->post('price', TYPE_FLOAT)
-$app->input()->post('newsletterEmail', TYPE_EMAIL)
-$app->input()->post('referringSite', TYPE_URL)
-$app->input()->post('signUpIp', TYPE_IP)
+$app->input()->post('country'); // equivalent to TYPE_STRING
+$app->input()->post('zipCode', TYPE_INT);
+$app->input()->post('subscribe', TYPE_BOOL);
+$app->input()->post('price', TYPE_FLOAT);
+$app->input()->post('newsletterEmail', TYPE_EMAIL);
+$app->input()->post('referringSite', TYPE_URL);
+$app->input()->post('signUpIp', TYPE_IP);
 
-$app->input()->cookie('realName') // equivalent to TYPE_STRING
-$app->input()->cookie('lastLoginTimestamp', TYPE_INT)
-$app->input()->cookie('hideAds', TYPE_BOOL)
-$app->input()->cookie('cartTotalAmount', TYPE_FLOAT)
-$app->input()->cookie('friend', TYPE_EMAIL)
-$app->input()->cookie('social', TYPE_URL)
-$app->input()->cookie('antiFraud', TYPE_IP)
+$app->input()->cookie('realName'); // equivalent to TYPE_STRING
+$app->input()->cookie('lastLoginTimestamp', TYPE_INT);
+$app->input()->cookie('hideAds', TYPE_BOOL);
+$app->input()->cookie('cartTotalAmount', TYPE_FLOAT);
+$app->input()->cookie('friend', TYPE_EMAIL);
+$app->input()->cookie('social', TYPE_URL);
+$app->input()->cookie('antiFraud', TYPE_IP);
 
-$app->input()->value($username) // equivalent to TYPE_STRING
-$app->input()->value($profileId, TYPE_INT)
-$app->input()->value($disabled, TYPE_BOOL)
-$app->input()->value($weight, TYPE_FLOAT)
-$app->input()->value($recipientEmail, TYPE_EMAIL)
-$app->input()->value($linkTo, TYPE_URL)
-$app->input()->value($whoisIp, TYPE_IP)
+$app->input()->value($username); // equivalent to TYPE_STRING
+$app->input()->value($profileId, TYPE_INT);
+$app->input()->value($disabled, TYPE_BOOL);
+$app->input()->value($weight, TYPE_FLOAT);
+$app->input()->value($recipientEmail, TYPE_EMAIL);
+$app->input()->value($linkTo, TYPE_URL);
+$app->input()->value($whoisIp, TYPE_IP);
 ```
 
 ### HTML escaping
