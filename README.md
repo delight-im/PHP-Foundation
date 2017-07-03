@@ -351,6 +351,14 @@ $upload->save();
 
 For more information on how to use the upload handler, including more advanced controls, please refer to the [documentation of the file upload library](https://github.com/delight-im/PHP-FileUpload#usage).
 
+If you want to check for the presence of (optional) file uploads before actually processing them, you can use the following two helpers:
+
+```php
+$app->hasUploads();
+// and/or
+$app->hasUpload('my-input-name');
+```
+
 ### Serving files
 
 You can serve (static) files to the client from your PHP code, e.g. after performing access control:
