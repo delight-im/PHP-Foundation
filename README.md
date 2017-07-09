@@ -30,6 +30,15 @@ Writing modern PHP applications efficiently
     ```
 
     on Linux if this directory (containing the `README.md`) is in `/var/www/html/` on the server.
+ 1. Ensure that the configuration in the `config/` directory – which usually contains sensitive information such as database credentials, SMTP passwords or API tokens – can be read only by the web server. For example, execute
+
+    ```
+    $ sudo chown -R www-data:www-data /var/www/html/config
+    $ sudo chmod 0555 /var/www/html/config
+    $ sudo chmod 0400 /var/www/html/config/.env
+    ```
+
+    on Linux if this directory (containing the `README.md`) is in `/var/www/html/` on the server.
 
 ## Usage
 
