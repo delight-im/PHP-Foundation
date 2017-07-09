@@ -416,7 +416,7 @@ The following helpers and utilities are available throughout your application co
  * `$app->getQueryString()`
  * `$app->getRequestMethod()`
 
-### Security
+## Security
 
  * **SQL injections** are prevented if you write to the database using prepared statements only. That is, just follow the examples from the "Database access" section above.
  * **Cross-site scripting (XSS)** protection is available via the convenient escaping and templating features (see sections "HTML escaping" and "Templates" above).
