@@ -45,12 +45,14 @@ Writing modern PHP applications efficiently
     ```
 
     on Linux if this directory (containing the `README.md`) is in `/var/www/html/` on the server.
+ 1. If you want to enable automatic backups in compressed and encrypted form, please refer to the [“Backups” section](#backups) further below.
 
 ## Usage
 
 ### Application structure
 
  * `app/`: This is the most important directory: It's where you'll write all your PHP code. It's entirely up to you how you structure your application in this directory. Create as many files and subdirectories here as you wish. The `index.php` file is the main entry point to your application. The complete folder is exclusively for you.
+ * `backups/`: If you make use of the convenient `backup.sh` script, this is where the compressed and encrypted backups will be stored. See the [“Backups” section](#backups) further down.
  * `config/`: Store your local configuration, which should include all confidential information, keys and secrets, here. Put everything in `config/.env` while keeping an up-to-date copy of that file in `config/.env.example` which should have exactly the same keys but all the confidential values removed. The first file will be your private configuration, the second file can be checked in to version control for others to see what configuration keys they need. Always remember to securely back up the private configuration file (`config/.env`) somewhere outside of your VCS. Do *not* store it in version control.
  * `public/`: This is where you can store your static assets, such as CSS files, JavaScript files, images, your `robots.txt` and so on. The files will be available at the root URL of your application, i.e. `public/favicon.ico` can simply be accessed at `favicon.ico`. The complete folder is exclusively for you.
  * `storage/app/`: Storage that you can use in your app to store files temporarily or permanently. This space is private to your application. Feel free to add any number of subfolders and files here.
@@ -58,6 +60,7 @@ Writing modern PHP applications efficiently
  * `vendor/`: This directory is where Composer will install all dependencies. Do *not* add, modify or delete anything here.
  * `views/`: If you use templates for HTML, XML, CSV or LaTeX (or anything else) that should be rendered by the built-in template engine, this is where you should store them.
  * `.htaccess`: Rules and optimizations for Apache HTTP Server. You may add your own rules here, but only in the `CUSTOM` section at the bottom.
+ * `backup.sh`: Script that can create compressed and encrypted backups in the `backups/` directory for you. See the [“Backups” section](#backups) further below.
  * `composer.json`: The dependencies of your application. This framework must *always* be included in the `require` section as `delight-im/framework`, so please don't remove that entry. But otherwise, feel free to add or modify any of your own entries.
  * `index.php`: This is the main controller of this framework. It sets everything up correctly and passes on control to your application code. Do *not* change or delete this.
 
@@ -415,6 +418,55 @@ The following helpers and utilities are available throughout your application co
  * `$app->getPort()`
  * `$app->getQueryString()`
  * `$app->getRequestMethod()`
+
+## Backups
+
+This package includes support for automatic backups of your database, app storage and log files in compressed and encrypted form. These backups are not enabled by default. For information on how to enable them and make good use of them, please see below.
+
+### Enabling backups
+
+ 1. Execute the following commands on Linux if this directory (containing the `README.md`) is in `/var/www/html/` on the server:
+
+    ```
+    # Make the backup script executable while preventing modifications to its content
+    $ sudo chmod 0500 /var/www/html/backup.sh
+    # Assign ownership of the backup script to the superuser
+    $ sudo chown root:root /var/www/html/backup.sh
+    # Generate a public/private keypair and store the private key in the `backups` directory
+    $ openssl genpkey -algorithm RSA -out /var/www/html/backups/asymmetric-key.private.pem -pkeyopt rsa_keygen_bits:4096
+    # Extract the public key from the new private key in the `backups` directory
+    $ openssl rsa -in /var/www/html/backups/asymmetric-key.private.pem -outform PEM -out /var/www/html/backups/asymmetric-key.public.pem -pubout
+    # Allow only read access by its owner for the private key
+    $ sudo chmod 0400 /var/www/html/backups/asymmetric-key.private.pem
+    # Grant everybody read access to the public key but no other rights
+    $ sudo chmod 0444 /var/www/html/backups/asymmetric-key.public.pem
+    # Make the `backups` directory writable only by its owner
+    $ sudo chmod 0755 /var/www/html/backups
+    # Assign ownership of the `backups` directory and its contents to the superuser
+    $ sudo chown -R root:root /var/www/html/backups
+    ```
+
+ 1. Copy – or perhaps *move* – the private key that has been generated above (`backups/asymmetric-key.private.pem`) to a *secure* location on *another machine*. It is important that you choose a location where *you won’t lose* the key and *nobody else will be able to view* the key. Without the private key, you won’t be able to restore your backups later.
+
+ 1. In order to set up the periodic execution of the backup script, run
+
+    ```
+    $ sudo crontab -e
+    ```
+
+    and add a new line with the following content:
+
+    ```
+    30 4 * * * /bin/bash /var/www/html/backup.sh > /var/www/html/backups/last.log 2>&1
+    ```
+
+    This will create a new backup every night at 04:30. While daily backups should usually be the minimum, you *may* create backups more frequently, if required, e.g. by separating multiple hours with a comma in the crontab entry, as in `4,10,16,22`.
+
+### Moving backups offsite
+
+For a truly effective backup strategy, of course, you should move the archives created in the `backups/` directory *offsite*, i.e. to a remote location such as another server that you maintain specifically for backups.
+
+Thus, you should either set up a periodic task on a remote machine to *pull* the contents of the `backups/` directory regularly, or set up a periodic task on the local machine to *push* the backups to a remote location with *append-only* privileges (so that a compromised server could not destroy all your backups).
 
 ## Security
 
