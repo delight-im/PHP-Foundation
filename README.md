@@ -1,6 +1,10 @@
 # PHP-Foundation
 
-Writing modern PHP applications efficiently
+**Writing modern PHP applications efficiently**
+
+Build *better* applications *faster*, while still using “plain old PHP” only.
+
+There are no DSLs or pseudo-languages that you need to learn (except [Twig](views/welcome.html)!), nor any “magical” command-line utilities.
 
 ## Requirements
 
