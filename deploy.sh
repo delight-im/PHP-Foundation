@@ -13,11 +13,11 @@ cd "${BASH_SOURCE%/*}" || exit 1
 if [ "$1" == "" ] || [ "$2" == "" ] || [ "$3" == "" ] || [ "$4" == "" ]; then
 	# Explain command
 	echo "Usage:"
-	echo "  ./deploy.sh {host} {port} {user} {path}"
-	echo "    {host}: hostname of the target server, e.g. 'example.com'"
-	echo "    {port}: SSH port at the target server, e.g. '22'"
-	echo "    {user}: user for authentication at the target server, e.g. 'john-doe'"
-	echo "    {path}: application directory on the target server (without trailing slash), e.g. '/var/www/example.com'"
+	echo "  deploy.sh <host> <port> <user> <path>"
+	echo "    <host>: hostname of the target server, e.g. 'example.com'"
+	echo "    <port>: SSH port at the target server, e.g. '22'"
+	echo "    <user>: user for authentication at the target server, e.g. 'john-doe'"
+	echo "    <path>: application directory on the target server (without trailing slash), e.g. '/var/www/example.com'"
 
 	# If no command-line arguments have been specified at all
 	if [ "$1" == "" ] && [ "$2" == "" ] && [ "$3" == "" ] && [ "$4" == "" ]; then
