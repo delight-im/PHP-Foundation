@@ -62,6 +62,7 @@ echo "   * Ignoring '.htaccess' file (environment-specific) ..." # [1]
 echo "   * Ignoring 'backups' directory (environment-specific) ..." # [1]
 echo "   * Ignoring 'backup.sh' file (protected) ..." # [1]
 echo "   * Ignoring 'config' directory (environment-specific) ..." # [1]
+echo "   * Ignoring 'deploy.sh' file (needless) ..." # [1]
 echo "   * Ignoring 'storage/app' directory (environment-specific) ..." # [1]
 echo "   * Ignoring 'storage/framework' directory (environment-specific) ..." # [1]
 touch "$DEPLOYMENT_ARCHIVE_FILENAME"
@@ -75,6 +76,7 @@ tar \
 	--exclude "./backups" \
 	--exclude "./backup.sh" \
 	--exclude "./config" \
+	--exclude "./deploy.sh" \
 	--exclude "./storage/app" \
 	--exclude "./storage/framework" \
 	--file="$DEPLOYMENT_ARCHIVE_FILENAME" \
@@ -125,6 +127,7 @@ ssh -p "$TARGET_SSH_PORT" "${TARGET_SSH_USER}@${TARGET_SSH_HOST}" /bin/bash <<- 
 		\! -path './backup.sh' \
 		\! -path './config' \
 		\! -path './config/*' \
+		\! -path './deploy.sh' \
 		\! -path './storage' \
 		\! -path './storage/app' \
 		\! -path './storage/app/*' \
