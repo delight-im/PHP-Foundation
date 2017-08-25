@@ -26,7 +26,7 @@ if [ "$1" == "" ] || [ "$2" == "" ] || [ "$3" == "" ] || [ "$4" == "" ]; then
 	# If the command-line arguments have just been incomplete
 	else
 		# Return with failure
-		exit 1
+		exit 2
 	fi
 fi
 
@@ -54,7 +54,7 @@ if [ -d "app" ] && [ -f "index.php" ] && [ -d "public" ] && [ -d "vendor" ] && [
 	echo " * Verified source directory ..."
 else
 	echo " * Source directory could not be verified ..."
-	exit 2
+	exit 3
 fi
 
 # Create an archive of all files in the source directory that are to be transferred to the target host
@@ -94,7 +94,7 @@ ssh -p "$TARGET_SSH_PORT" "${TARGET_SSH_USER}@${TARGET_SSH_HOST}" /bin/bash <<- 
 		echo " * Found target directory ..."
 	else
 		echo " * Target directory could not be found ..."
-		exit 3
+		exit 4
 	fi
 
 	# Verify that the target directory is a valid project root by looking for some important files and directories
@@ -102,7 +102,7 @@ ssh -p "$TARGET_SSH_PORT" "${TARGET_SSH_USER}@${TARGET_SSH_HOST}" /bin/bash <<- 
 		echo " * Verified target directory ..."
 	else
 		echo " * Target directory could not be verified ..."
-		exit 4
+		exit 5
 	fi
 
 	# Enable maintenance mode on the site
