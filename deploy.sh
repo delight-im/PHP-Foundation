@@ -59,6 +59,8 @@ fi
 # Create an archive of all files in the source directory that are to be transferred to the target host
 echo " * Packing files in source directory ..."
 echo "   * Ignoring '.htaccess' file (environment-specific) ..." # [1]
+echo "   * Ignoring 'backups' directory (environment-specific) ..." # [1]
+echo "   * Ignoring 'backup.sh' file (protected) ..." # [1]
 echo "   * Ignoring 'config' directory (environment-specific) ..." # [1]
 echo "   * Ignoring 'storage/app' directory (environment-specific) ..." # [1]
 echo "   * Ignoring 'storage/framework' directory (environment-specific) ..." # [1]
@@ -70,6 +72,8 @@ tar \
 	--exclude "./.git" \
 	--exclude "./.idea" \
 	--exclude "./.htaccess" \
+	--exclude "./backups" \
+	--exclude "./backup.sh" \
 	--exclude "./config" \
 	--exclude "./storage/app" \
 	--exclude "./storage/framework" \
@@ -116,6 +120,9 @@ ssh -p "$TARGET_SSH_PORT" "${TARGET_SSH_USER}@${TARGET_SSH_HOST}" /bin/bash <<- 
 		\! -path './index.php' \
 		\! -path './maintenance.php' \
 		\! -path './.htaccess' \
+		\! -path './backups' \
+		\! -path './backups/*' \
+		\! -path './backup.sh' \
 		\! -path './config' \
 		\! -path './config/*' \
 		\! -path './storage' \
