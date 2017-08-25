@@ -4,6 +4,9 @@
 ### Copyright (c) delight.im (https://www.delight.im/)
 ### Licensed under the MIT License (https://opensource.org/licenses/MIT)
 
+# Switch to the directory where the current script is located
+cd "${BASH_SOURCE%/*}" || exit 1
+
 # Process command-line arguments
 
 # If no command-line arguments (or only incomplete ones) have been provided
