@@ -28,21 +28,22 @@ if [ "$1" == "" ] || [ "$2" == "" ] || [ "$3" == "" ] || [ "$4" == "" ]; then
 	fi
 fi
 
-# Define constants
+# BEGIN CONSTANTS
 
-# Set constants based on the command-line arguments received
+# Hostname of the target server as received with the command-line arguments
 TARGET_SSH_HOST=$1
+# SSH port at the target server as received with the command-line arguments
 TARGET_SSH_PORT=$2
+# User for authentication at the target server as received with the command-line arguments
 TARGET_SSH_USER=$3
+# Application directory on the target server (without trailing slash) as received with the command-line arguments
 TARGET_APPLICATION_PATH=$4
-
-# Generate a unique name for the new deployment
+# Unique name for the new deployment
 DEPLOYMENT_NAME="deployment-$(date -u +'%Y%m%dT%H%M%SZ')"
-
-# Define the filename used for archives of the new deployment
+# Filename used for archives of the new deployment
 DEPLOYMENT_ARCHIVE_FILENAME="$DEPLOYMENT_NAME.tar.gz"
 
-# Start actual deployment
+# END CONSTANTS
 
 # Introduce the deployment to the user and confirm the target host and directory
 echo "Deploying to '$TARGET_APPLICATION_PATH' on '$TARGET_SSH_HOST'"
