@@ -7,8 +7,6 @@
 # Switch to the directory where the current script is located
 cd "${BASH_SOURCE%/*}" || exit 1
 
-# Process command-line arguments
-
 # If no command-line arguments (or only incomplete ones) have been provided
 if [ "$1" == "" ] || [ "$2" == "" ] || [ "$3" == "" ] || [ "$4" == "" ]; then
 	# Explain command
