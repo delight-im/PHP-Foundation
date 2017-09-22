@@ -6,7 +6,6 @@
 
 <IfModule mod_rewrite.c>
 
-	# Enable URL rewriting
 	RewriteEngine On
 
 	# Enable maintenance mode (Uncomment 1 line below)
