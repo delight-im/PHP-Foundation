@@ -2,6 +2,7 @@
 
 $app->get('/', function (\Delight\Foundation\App $app) {
 	// do something
+	// ...
 
 	// and return a view
 	echo $app->view('welcome.html', [
@@ -11,6 +12,7 @@ $app->get('/', function (\Delight\Foundation\App $app) {
 
 $app->get('/greet/:name', function (\Delight\Foundation\App $app, $name) {
 	// do something
+	// ...
 
 	// and return a view
 	echo $app->view('greeting.html', [
@@ -20,7 +22,8 @@ $app->get('/greet/:name', function (\Delight\Foundation\App $app, $name) {
 });
 
 $app->post('/photos/:id/delete', function (\Delight\Foundation\App $app, $id) {
-	// do something ...
+	// do something
+	// ...
 });
 
 // return an error page for undefined pages
