@@ -466,6 +466,8 @@ This package includes support for automatic backups of your database, app storag
 
     This will create a new backup every night at 04:30. While daily backups should usually be the minimum, you *may* create backups more frequently, if required, e.g. by separating multiple hours with a comma in the crontab entry, as in `4,10,16,22`.
 
+    If you don’t want your backups to be encrypted, pass `unencrypted` as the only argument to `backup.sh`. Otherwise, you may pass `encrypted`, which is also the default.
+
 ### Moving backups offsite
 
 For a truly effective backup strategy, of course, you should move the archives created in the `backups/` directory *offsite*, i.e. to a remote location such as another server that you maintain specifically for backups.
