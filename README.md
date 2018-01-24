@@ -25,7 +25,7 @@ There are no DSLs or pseudo-languages that you need to learn (except [Twig](view
     **Note:** This framework does currently work in the web root (at `/` under your domain) only.
 
  1. Copy the configuration template `config/.env.example` to `config/.env`. This new file is where your private configuration will be stored. Fill in the correct settings for your environment. The most important setting is `APP_PUBLIC_URL` which is required for your application to work in the first place.
- 1. If you want to use the built-in authentication component, create the database tables for [MySQL](https://github.com/delight-im/PHP-Auth/blob/master/Database/MySQL.sql) or [MariaDB](https://github.com/delight-im/PHP-Auth/blob/master/Database/MySQL.sql) in the database that you specified in `config/.env`.
+ 1. If you want to use the built-in authentication component, create the database tables for [MySQL](https://github.com/delight-im/PHP-Auth/blob/master/Database/MySQL.sql), [MariaDB](https://github.com/delight-im/PHP-Auth/blob/master/Database/MySQL.sql) or [SQLite](https://github.com/delight-im/PHP-Auth/blob/master/Database/SQLite.sql) in the database that you specified in `config/.env`.
  1. Get Composer [[?]](https://github.com/delight-im/Knowledge/blob/master/Composer%20(PHP).md) and run
 
     ```
