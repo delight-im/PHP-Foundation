@@ -1,7 +1,8 @@
 {
 	"require": {
 		"php": ">=5.6.0",
-		"delight-im/foundation-core": "^4.0"
+		"delight-im/foundation-core": "^4.0",
+		"delight-im/auth": "^8.0"
 	},
 	"autoload": {
 		"psr-4": {
