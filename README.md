@@ -29,6 +29,7 @@ There are no DSLs or pseudo-languages that you need to learn (except [Twig](view
  1. Get Composer [[?]](https://github.com/delight-im/Knowledge/blob/master/Composer%20(PHP).md) and run
 
     ```
+    # composer check-platform-reqs
     $ composer install
     ```
 
