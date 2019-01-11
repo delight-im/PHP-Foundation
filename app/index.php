@@ -27,5 +27,5 @@ $app->post('/photos/:id/delete', function (\Delight\Foundation\App $app, $id) {
 });
 
 // return an error page for undefined pages
-header('HTTP/1.0 404 Not Found');
+$app->setStatus(404);
 echo $app->view('404.html');
