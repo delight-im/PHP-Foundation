@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0eeed6e9b64c2e146d0061ed4549e349",
+    "content-hash": "b8c555fc035224c49bcddaf38760c14a",
     "packages": [
         {
             "name": "delight-im/auth",
-            "version": "v8.0.0",
+            "version": "v8.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delight-im/PHP-Auth.git",
-                "reference": "50c284fff72f84ced73998749eeb9687c659f76e"
+                "reference": "4cd6360fc7edbbff72c9199b4f4ce3548b659232"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delight-im/PHP-Auth/zipball/50c284fff72f84ced73998749eeb9687c659f76e",
-                "reference": "50c284fff72f84ced73998749eeb9687c659f76e",
+                "url": "https://api.github.com/repos/delight-im/PHP-Auth/zipball/4cd6360fc7edbbff72c9199b4f4ce3548b659232",
+                "reference": "4cd6360fc7edbbff72c9199b4f4ce3548b659232",
                 "shasum": ""
             },
             "require": {
                 "delight-im/base64": "^1.0",
                 "delight-im/cookie": "^3.1",
-                "delight-im/db": "^1.2",
+                "delight-im/db": "^1.3",
                 "ext-openssl": "*",
                 "php": ">=5.6.0"
             },
@@ -45,7 +45,7 @@
                 "login",
                 "security"
             ],
-            "time": "2018-03-25T03:34:37+00:00"
+            "time": "2018-08-28T21:51:30+00:00"
         },
         {
             "name": "delight-im/base64",
@@ -90,16 +90,16 @@
         },
         {
             "name": "delight-im/cookie",
-            "version": "v3.1.0",
+            "version": "v3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delight-im/PHP-Cookie.git",
-                "reference": "76ef2a21817cf7a034f85fc3f4d4bfc60f873947"
+                "reference": "b3ca3233dd1e1e91efb259b9b717a1c941d67ecc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delight-im/PHP-Cookie/zipball/76ef2a21817cf7a034f85fc3f4d4bfc60f873947",
-                "reference": "76ef2a21817cf7a034f85fc3f4d4bfc60f873947",
+                "url": "https://api.github.com/repos/delight-im/PHP-Cookie/zipball/b3ca3233dd1e1e91efb259b9b717a1c941d67ecc",
+                "reference": "b3ca3233dd1e1e91efb259b9b717a1c941d67ecc",
                 "shasum": ""
             },
             "require": {
@@ -127,20 +127,20 @@
                 "samesite",
                 "xss"
             ],
-            "time": "2017-10-18T19:48:59+00:00"
+            "time": "2018-10-11T17:27:45+00:00"
         },
         {
             "name": "delight-im/db",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delight-im/PHP-DB.git",
-                "reference": "df99ef7c2e86c7ce206647ffe8ba74447c075b57"
+                "reference": "7a03da20b5592fa445c10cd6c7245d51037292c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delight-im/PHP-DB/zipball/df99ef7c2e86c7ce206647ffe8ba74447c075b57",
-                "reference": "df99ef7c2e86c7ce206647ffe8ba74447c075b57",
+                "url": "https://api.github.com/repos/delight-im/PHP-DB/zipball/7a03da20b5592fa445c10cd6c7245d51037292c4",
+                "reference": "7a03da20b5592fa445c10cd6c7245d51037292c4",
                 "shasum": ""
             },
             "require": {
@@ -168,7 +168,7 @@
                 "sql",
                 "sqlite"
             ],
-            "time": "2017-03-18T20:51:59+00:00"
+            "time": "2018-08-28T18:23:01+00:00"
         },
         {
             "name": "delight-im/file-upload",
@@ -580,16 +580,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.9",
+            "version": "v5.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "7ffc1ea296ed14bf8260b6ef11b80208dbadba91"
+                "reference": "181b89f18a90f8925ef805f950d47a7190e9b950"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/7ffc1ea296ed14bf8260b6ef11b80208dbadba91",
-                "reference": "7ffc1ea296ed14bf8260b6ef11b80208dbadba91",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/181b89f18a90f8925ef805f950d47a7190e9b950",
+                "reference": "181b89f18a90f8925ef805f950d47a7190e9b950",
                 "shasum": ""
             },
             "require": {
@@ -630,7 +630,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2018-01-23T07:37:21+00:00"
+            "time": "2018-07-31T09:26:32+00:00"
         },
         {
             "name": "twig/twig",
