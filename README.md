@@ -189,13 +189,13 @@ Place your HTML, XML, CSV or LaTeX (or anything else) templates in the `views/` 
 In order to render a template, just load it in your PHP code:
 
 ```php
-echo $app->view('welcome.html');
+echo $app->view('welcome.html.twig');
 ```
 
 Usually, you'll want to pass data to the templates as well:
 
 ```php
-echo $app->view('welcome.html', [
+echo $app->view('welcome.html.twig', [
     'userId' => $id
     'name' => $name
     'messages' => $messages
@@ -235,7 +235,7 @@ Conditional expressions and loops are available as control structures:
 For less code and more markup re-use, templates can be embedded inside each other:
 
 ```html
-{{ include('includes_header.html') }}
+{% include 'includes/header.html.twig' %}
 ```
 
 Embedding can even be combined with loops:
@@ -245,7 +245,7 @@ Embedding can even be combined with loops:
     {% for user in users %}
         <li>{{ user.username }}</li>
         {% for picture in user.pictures %}
-            {{ include('picture_box.html') }}
+            {% include 'picture_box.html.twig' %}
             <!-- `picture_box` has access to `picture` -->
         {% endfor %}
     {% endfor %}
@@ -316,7 +316,7 @@ In order to *display* the messages, which you'll probably want to do in your tem
  * [Bootstrap 3](http://getbootstrap.com/)
 
    ```
-   {% include 'includes/flash/bootstrap-v3.html' %}
+   {% include 'includes/flash/bootstrap-v3.html.twig' %}
    ```
 
 ### Mail
