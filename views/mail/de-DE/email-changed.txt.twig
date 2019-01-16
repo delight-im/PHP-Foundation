@@ -3,7 +3,7 @@
  * Copyright (c) delight.im (https://www.delight.im/)
  * Licensed under the MIT License (https://opensource.org/licenses/MIT)
 #}
-{% include 'mail/de-DE/includes/header.txt' %}
+{% include 'mail/de-DE/includes/header.txt.twig' %}
 
 wir möchten dich darüber informieren, dass deine E-Mail-Adresse für {{ projectName|raw }} kürzlich{% if oldEmailAddress %} von <{{ oldEmailAddress|raw }}>{% endif %}{% if newEmailAddress %} zu <{{ newEmailAddress|raw }}>{% endif %} geändert wurde.
 
@@ -11,4 +11,4 @@ Wenn du diese Änderung nicht vorgenommen hast, kontaktiere uns bitte über unse
 
 Solltest du noch andere Fragen haben, kannst du uns ebenfalls gerne um Hilfe bitten.
 
-{% include 'mail/de-DE/includes/footer.txt' %}
+{% include 'mail/de-DE/includes/footer.txt.twig' %}

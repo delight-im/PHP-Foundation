@@ -5,7 +5,7 @@ $app->get('/', function (\Delight\Foundation\App $app) {
 	// ...
 
 	// and return a view
-	echo $app->view('welcome.html', [
+	echo $app->view('welcome.html.twig', [
 		'users' => [ 'Alice', 'Bob' ]
 	]);
 });
@@ -15,7 +15,7 @@ $app->get('/greet/:name', function (\Delight\Foundation\App $app, $name) {
 	// ...
 
 	// and return a view
-	echo $app->view('greeting.html', [
+	echo $app->view('greeting.html.twig', [
 		'name' => $name,
 		'greetingId' => $app->input()->get('greetingId', TYPE_INT)
 	]);
@@ -28,4 +28,4 @@ $app->post('/photos/:id/delete', function (\Delight\Foundation\App $app, $id) {
 
 // return an error page for undefined pages
 $app->setStatus(404);
-echo $app->view('404.html');
+echo $app->view('404.html.twig');

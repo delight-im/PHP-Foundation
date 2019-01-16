@@ -3,7 +3,7 @@
  * Copyright (c) delight.im (https://www.delight.im/)
  * Licensed under the MIT License (https://opensource.org/licenses/MIT)
 #}
-{% include 'mail/en-US/includes/header.txt' %}
+{% include 'mail/en-US/includes/header.txt.twig' %}
 
 Welcome to {{ projectName|raw }}!
 
@@ -15,4 +15,4 @@ After completing the confirmation, you can{% else %}You can now{% endif %} sign 
 
 If you have any questions, please feel free to ask us for help.
 
-{% include 'mail/en-US/includes/footer.txt' %}
+{% include 'mail/en-US/includes/footer.txt.twig' %}
