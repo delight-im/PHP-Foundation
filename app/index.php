@@ -1,5 +1,9 @@
 <?php
 
+$app->get('/', '\App\HomeController::getIndex');
+$app->get('/greet/:name', '\App\IntroController::getGreet');
+$app->post('/photos/:id/delete', '\App\PhotoController::postDelete');
+
 // // OR USE CLOSURES (ANONYMOUS FUNCTIONS) DIRECTLY IN THIS FILE
 //
 // use Delight\Foundation\App;
