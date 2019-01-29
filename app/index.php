@@ -1,6 +1,8 @@
 <?php
 
-$app->get('/', function (\Delight\Foundation\App $app) {
+use Delight\Foundation\App;
+
+$app->get('/', function (App $app) {
 	// do something
 	// ...
 
@@ -10,7 +12,7 @@ $app->get('/', function (\Delight\Foundation\App $app) {
 	]);
 });
 
-$app->get('/greet/:name', function (\Delight\Foundation\App $app, $name) {
+$app->get('/greet/:name', function (App $app, $name) {
 	// do something
 	// ...
 
@@ -21,7 +23,7 @@ $app->get('/greet/:name', function (\Delight\Foundation\App $app, $name) {
 	]);
 });
 
-$app->post('/photos/:id/delete', function (\Delight\Foundation\App $app, $id) {
+$app->post('/photos/:id/delete', function (App $app, $id) {
 	// do something
 	// ...
 });
