@@ -73,7 +73,7 @@ There are no DSLs or pseudo-languages that you need to learn (except [Twig](view
 
 Your application will be available at the URL where this root folder is accessible on your web server.
 
-**Note:** You should have added this URL to the `config/.env` already. This is required for your application to work.
+**Note:** You should have added this URL to the configuration in `config/.env` as `APP_PUBLIC_URL` already. This is required for your application to work correctly.
 
 The single pages or endpoints of your application will be served at the routes that you define in the `app/` directory. A few sample routes have already been added.
 
