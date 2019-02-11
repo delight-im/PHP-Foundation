@@ -75,6 +75,10 @@ Your application will be available at the URL where this root folder is accessib
 
 **Note:** You should have added this URL to the configuration in `config/.env` as `APP_PUBLIC_URL` already. This is required for your application to work correctly.
 
+Sometimes a single application is expected to respond to *multiple* hostnames with *different* content. Examples include the use of language-specific subdomains (such as `fr.example.com` and `id.example.com`), country-specific TLDs (such as `example.com` and `example.org`), separate storefronts (such as `seller-a.example.com` and `seller-b.example.com`), or user-specific content (such as `jane.example.org` and `john.example.org`). For those cases, you can define multiple supported URLs in `APP_PUBLIC_URL` by separating the individual URLs using the vertical bar or pipe character (`U+007C VERTICAL LINE`). In your application code, you should then decide which content to show based on the value of `$app->getCanonicalHost()`.
+
+However, if you just want to serve the *same* content at multiple hostnames or different schemes, you should consider using redirects instead, which can forward from different hostnames or schemes to one canonical form. In most of these cases, you’ll want to send HTTP status `301` for *permanent* redirects.
+
 The single pages or endpoints of your application will be served at the routes that you define in the `app/` directory. A few sample routes have already been added.
 
 For more detailed information on routes, please refer to the [documentation of the router](https://github.com/delight-im/PHP-Router).
