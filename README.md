@@ -429,6 +429,7 @@ The following helpers and utilities are available throughout your application co
  * `$app->flash()` (`app.flash()` in templates)
  * `$app->currentRoute()` (`app.currentRoute()` in templates)
  * `$app->currentUrl()` (`app.currentUrl()` in templates)
+ * `$app->getCanonicalHost()` (`app.getCanonicalHost()` in templates)
  * `$app->getHost()` (`app.getHost()` in templates)
  * `$app->getClientIp()` (`app.getClientIp()` in templates)
  * `$app->isHttp()`
