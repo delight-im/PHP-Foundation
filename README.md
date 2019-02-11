@@ -281,6 +281,18 @@ The main application object is available as a global variable named `app` by def
 <link rel="icon" type="image/png" href="{{ app.url('/favicon.ico') }}">
 ```
 
+Finally, you can add functions from your PHP code which then become available for use in the templates:
+
+```php
+$app->getTemplateManager()->addFunction('translate', function ($value) {
+    return gettext($value);
+});
+```
+
+```html
+<p>{{ translate('Thanks for joining our community!') }}</p>
+```
+
 Please refer to the [documentation of the template engine](http://twig.sensiolabs.org/doc/templates.html) for more information on how to write templates.
 
 ### Authentication
