@@ -56,7 +56,7 @@ There are no DSLs or pseudo-languages that you need to learn (except [Twig](view
 
 ### Application structure
 
- * `app/`: This is the most important directory: It's where you'll write all your PHP code. It's entirely up to you how you structure your application in this directory. Create as many files and subdirectories here as you wish. The `index.php` file is the main entry point to your application. The complete folder is exclusively for you.
+ * `app/`: This is the most important directory: It’s where you’ll write all your PHP code. It’s entirely up to you how you structure your application in this directory. Create as many files and subdirectories here as you wish. The `index.php` file is the main entry point to your application. The complete folder is exclusively for you.
  * `backups/`: If you make use of the convenient `backup.sh` script, this is where the compressed and encrypted backups will be stored. See the [“Backups” section](#backups) further down.
  * `config/`: Store your local configuration, which should include all confidential information, keys and secrets, here. Put everything in `config/.env` while keeping an up-to-date copy of that file in `config/.env.example` which should have exactly the same keys but all the confidential values removed. The first file will be your private configuration, the second file can be checked in to version control for others to see what configuration keys they need. Always remember to securely back up the private configuration file (`config/.env`) somewhere outside of your VCS. Do *not* store it in version control.
  * `public/`: This is where you can store your static assets, such as CSS files, JavaScript files, images, your `robots.txt` and so on. The files will be available at the root URL of your application, i.e. `public/favicon.ico` can simply be accessed at `favicon.ico`. The complete folder is exclusively for you.
@@ -66,7 +66,7 @@ There are no DSLs or pseudo-languages that you need to learn (except [Twig](view
  * `views/`: If you use templates for HTML, XML, CSV or LaTeX (or anything else) that should be rendered by the built-in template engine, this is where you should store them.
  * `.htaccess`: Rules and optimizations for Apache HTTP Server. You may add your own rules here, but only in the `CUSTOM` section at the bottom.
  * `backup.sh`: Script that can create compressed and encrypted backups in the `backups/` directory for you. See the [“Backups” section](#backups) further below.
- * `composer.json`: The dependencies of your application. This framework must *always* be included in the `require` section as `delight-im/framework`, so please don't remove that entry. But otherwise, feel free to add or modify any of your own entries.
+ * `composer.json`: The dependencies of your application. This framework must *always* be included in the `require` section as `delight-im/framework`, so please don’t remove that entry. But otherwise, feel free to add or modify any of your own entries.
  * `index.php`: This is the main controller of this framework. It sets everything up correctly and passes on control to your application code. Do *not* change or delete this.
 
 ### Routing
@@ -93,7 +93,7 @@ You may store files private to your application in `storage/app/`. Feel free to 
 
 The storage path can be retrieved in your application code via `$app->getStoragePath('/path/to/subfolder/file.txt')`, for example.
 
-Files inside `storage/app/` are private to your application. You may use PHP's file handling utilities to work with the files or offer them to the user as a download (see "File downloads" below).
+Files inside `storage/app/` are private to your application. You may use PHP’s file handling utilities to work with the files or offer them to the user as a download (see "File downloads" below).
 
 ### Database access
 
@@ -105,7 +105,7 @@ $app->db();
 
 For information on how to read and write data using this instance, please refer to the [documentation of the database library](https://github.com/delight-im/PHP-DB).
 
-**Note:** You don't have to construct the database instance or establish the connection yourself. This will be done for you automatically. Just call the methods to read and write data on the instance provided.
+**Note:** You don’t have to construct the database instance or establish the connection yourself. This will be done for you automatically. Just call the methods to read and write data on the instance provided.
 
 ### String handling
 
@@ -121,7 +121,7 @@ This framework comes with easy and safe input validation for `GET`, `POST` and c
 
 Both validation and filtering are performed automatically and *correctly typecast* values are returned for you.
 
-If a value does not exist or if it's invalid, you're guaranteed to receive `null` as the result. This way, you don't have to check for empty strings, `null`, `false` or invalid formats separately.
+If a value does not exist or if it’s invalid, you’re guaranteed to receive `null` as the result. This way, you don’t have to check for empty strings, `null`, `false` or invalid formats separately.
 
 ```php
 $app->input()->get('username'); // equivalent to TYPE_STRING
@@ -184,7 +184,7 @@ echo '<img src="'.e($profilePictureUrl).'" alt="Bob" width="96" height="96">';
 <img src="<?= e($profilePictureUrl) ?>" alt="Bob" width="96" height="96">
 ```
 
-If you use templates stored in the `views/` directory (see below), you don't need this, as templates come with automatic escaping by default.
+If you use templates stored in the `views/` directory (see below), you don’t need this, as templates come with automatic escaping by default.
 
 ### Templates
 
@@ -196,7 +196,7 @@ In order to render a template, just load it in your PHP code:
 echo $app->view('welcome.html.twig');
 ```
 
-Usually, you'll want to pass data to the templates as well:
+Usually, you’ll want to pass data to the templates as well:
 
 ```php
 echo $app->view('welcome.html.twig', [
@@ -309,7 +309,7 @@ Convenient management of session data and cookies is available via the two class
 
 For information on how to use these two classes, please refer to [the documentation of the session and cookie library](https://github.com/delight-im/PHP-Cookie).
 
-**Note:** You don't have to include these two classes yourself anymore. They are included and loaded automatically.
+**Note:** You don’t have to include these two classes yourself anymore. They are included and loaded automatically.
 
 ### Flash messages
 
@@ -325,7 +325,7 @@ $app->flash()->warning('Watch out!');
 $app->flash()->danger('Oh snap!');
 ```
 
-In order to *display* the messages, which you'll probably want to do in your templates, use the methods available on the `$app->flash()` instance for retrieving the data. Alternatively, use one of the built-in partial templates for popular front-end solutions:
+In order to *display* the messages, which you’ll probably want to do in your templates, use the methods available on the `$app->flash()` instance for retrieving the data. Alternatively, use one of the built-in partial templates for popular front-end solutions:
 
  * [Bootstrap 3](http://getbootstrap.com/)
 
@@ -378,7 +378,7 @@ Please refer to the [documentation of the ID obfuscation library](https://github
 
 ### Uploading files
 
-Whenever you want to let users upload files to your application, there's a built-in component that does this in a convenient and safe way:
+Whenever you want to let users upload files to your application, there’s a built-in component that does this in a convenient and safe way:
 
 ```php
 $upload = $app->upload('/uploads/users/' . $userId . '/avatars');
@@ -404,7 +404,7 @@ You can serve (static) files to the client from your PHP code, e.g. after perfor
 $app->serveFile($app->getStoragePath('/photos/314.png'), 'image/png');
 ```
 
-Most commonly, this will be used to serve images. If certain files aren't public or cannot be accessed directly for other reasons, thus requiring more dynamic behavior, the helper above will be useful.
+Most commonly, this will be used to serve images. If certain files aren’t public or cannot be accessed directly for other reasons, thus requiring more dynamic behavior, the helper above will be useful.
 
 If you want to offer files for download, however, e.g. documents or videos, there is another helper that is more suitable (see "File downloads").
 
