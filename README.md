@@ -202,8 +202,6 @@ echo $app->view('welcome.html.twig', [
 ]);
 ```
 
-The `APP_DEBUG` setting from your `config/.env` file determines whether templates are always reloaded (in debug mode) or cached (in production).
-
 The data that you passed in the second parameter of the `$app->view(...)` method will be available in your template:
 
 ```html
