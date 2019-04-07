@@ -53,6 +53,10 @@ else {
 	\ini_set('display_startup_errors', 0);
 }
 
+if (!isset($_ENV['APP_DEBUG']) && !isset($_ENV['APP_PUBLIC_URL'])) {
+	throw new \RuntimeException('Environment variables not set');
+}
+
 // if the internal character encoding has been configured
 if (isset($_ENV['APP_CHARSET'])) {
 	// set the internal charset for PHP
