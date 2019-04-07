@@ -21,9 +21,11 @@ else {
 	exit;
 }
 
-// load the configuration into the environment variables
-$envLoader = new \Dotenv\Dotenv(__DIR__ . '/config');
-$envLoader->overload();
+if (@\is_dir(__DIR__ . '/config')) {
+	// load the configuration into the environment variables
+	$envLoader = new \Dotenv\Dotenv(__DIR__ . '/config');
+	$envLoader->overload();
+}
 
 // in debug mode
 if (!isset($_ENV['APP_DEBUG']) || $_ENV['APP_DEBUG'] === '1') {
