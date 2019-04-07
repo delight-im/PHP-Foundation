@@ -10,7 +10,7 @@
 $autoLoadPath = __DIR__.'/vendor/autoload.php';
 
 // if the Composer autoloader has been generated
-if (file_exists($autoLoadPath)) {
+if (@is_file($autoLoadPath)) {
 	// include the autoloader that loads all dependencies
 	require $autoLoadPath;
 }
