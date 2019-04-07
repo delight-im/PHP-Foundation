@@ -29,7 +29,7 @@ $envLoader->overload();
 if (!isset($_ENV['APP_DEBUG']) || $_ENV['APP_DEBUG'] === '1') {
 	// enable assertions
 	\ini_set('assert.active', 1);
-	\ini_set('zend.assertions', 1);
+	@\ini_set('zend.assertions', 1);
 	\ini_set('assert.exception', 1);
 
 	// show errors
@@ -43,7 +43,7 @@ if (!isset($_ENV['APP_DEBUG']) || $_ENV['APP_DEBUG'] === '1') {
 else {
 	// disable assertions
 	\ini_set('assert.active', 0);
-	\ini_set('zend.assertions', -1);
+	@\ini_set('zend.assertions', -1);
 	\ini_set('assert.exception', 0);
 
 	// hide errors
