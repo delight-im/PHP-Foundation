@@ -418,6 +418,162 @@ $app->downloadContent('<html>...</html>', 'Bookmarks-Export.html', 'text/html');
 $app->downloadFile($app->getStoragePath('/photos/42.jpg'), 'My Photo.jpg', 'image/jpeg');
 ```
 
+### Internationalization (I18N) and localization (L10N)
+
+If you want to localize your application and translate strings in your application code and in your templates, the built-in internationalization component offers everything you need.
+
+First, in order to enable the component, go to your configuration in `config/.env` and set `I18N_SUPPORTED_LOCALES` to a comma-separated list of languages or locales that you want to support. You can use the codes [listed here](https://github.com/delight-im/PHP-I18N/blob/master/src/Codes.php):
+
+```
+I18N_SUPPORTED_LOCALES=en-US,da-DK,es,es-AR,ko
+```
+
+Some of the locales you want to use may not be installed on your local machine or on the server that you deploy your application to. In that case, you will have to [install](https://github.com/delight-im/PHP-I18N#decide-on-your-initial-set-of-supported-locales) the locales first.
+
+The best language for the client is usually detected and applied automatically (from the HTTP header `Accept-Language` that is sent by the client), but you may select a language manually by supplying it in a subdomain (e.g. `da-DK.example.com`), in a path prefix (e.g. `http://www.example.com/pt-BR/welcome.html`), or as a parameter in the query string (as `locale`, `language`, `lang` or `lc`).
+
+Optionally, if you want to keep the currently selected language stored in the session or in a cookie, you can define the key or name to use for persistence in your configuration in `config/.env`:
+
+```
+I18N_SESSION_FIELD=language
+I18N_COOKIE_NAME=lang
+```
+
+You can always check the currently active locale for a client using `$app->i18n()->getLocale()` in your application code or using `app.i18n().getLocale()` in your templates. Apart from that, there are many other [helpers and utilities](https://github.com/delight-im/PHP-I18N#information-about-locales) available that let you access names and other information for your set of locales.
+
+Next, you need to identify and mark all strings that can be translated. For an existing application, this might require some more effort, but you can start with only a few strings, of course.
+
+This allows for the marked strings to be extracted automatically, so that they can be translated outside of the actual code, before being inserted again automatically during runtime.
+
+ * [Basic strings](https://github.com/delight-im/PHP-I18N#basic-strings)
+
+   * In your application code
+
+     ```
+     _('Welcome to our online store!');
+     ```
+
+   * In your templates
+
+     ```
+     {{ _('Welcome to our online store!') }}
+     ```
+
+ * [Strings with formatting](https://github.com/delight-im/PHP-I18N#strings-with-formatting)
+
+   * In your application code
+
+     ```
+     _f('Hello %s!', 'Jane');
+     ```
+
+   * In your templates
+
+     ```
+     {{ _f('Hello %s!', 'Jane') }}
+     ```
+
+ * [Strings with extended formatting](https://github.com/delight-im/PHP-I18N#strings-with-extended-formatting)
+
+   * In your application code
+
+     ```
+     _fe('{0} was born on {1, date}', 'John', -14182916);
+     ```
+
+   * In your templates
+
+     ```
+     {{ _fe('{0} was born on {1, date}', 'John', -14182916) }}
+     ```
+
+ * [Singular and plural forms](https://github.com/delight-im/PHP-I18N#singular-and-plural-forms)
+
+   * In your application code
+
+     ```
+     _p('The file has been saved.', 'The files have been saved.', 3);
+     ```
+
+   * In your templates
+
+     ```
+     {{ _p('The file has been saved.', 'The files have been saved.', 3) }}
+     ```
+
+ * [Singular and plural forms with formatting](https://github.com/delight-im/PHP-I18N#singular-and-plural-forms-with-formatting)
+
+   * In your application code
+
+     ```
+     _pf('You have %d new message', 'You have %d new messages', 32);
+     ```
+
+   * In your templates
+
+     ```
+     {{ _pf('You have %d new message', 'You have %d new messages', 32) }}
+     ```
+
+ * [Singular and plural forms with extended formatting](https://github.com/delight-im/PHP-I18N#singular-and-plural-forms-with-extended-formatting)
+
+   * In your application code
+
+     ```
+     _pfe('There is {0, number} monkey in {1}.', 'There are {0, number} monkeys in {1}.', 5, 'Anytown');
+     ```
+
+   * In your templates
+
+     ```
+     {{ _pfe('There is {0, number} monkey in {1}.', 'There are {0, number} monkeys in {1}.', 5, 'Anytown') }}
+     ```
+
+ * [Strings with context](https://github.com/delight-im/PHP-I18N#strings-with-context)
+
+   * In your application code
+
+     ```
+     _c('Select order:', 'sorting');
+     ```
+
+   * In your templates
+
+     ```
+     {{ _c('Select order:', 'sorting') }}
+     ```
+
+ * [Strings marked for later translation](https://github.com/delight-im/PHP-I18N#strings-marked-for-later-translation)
+
+   * In your application code
+
+     ```
+     $title = _m('Profile picture');
+     ```
+
+Finally, after having identified and marked some (or all) strings for translation in your application code and your templates, you can use the built-in tools to extract the strings automatically.
+
+To allow for the extraction of the strings from your templates, refresh and replace the cached versions of your template files by running the following two commands in the root directory:
+
+```bash
+$ sudo -u www-data php ./index.php clear-template-cache
+$ sudo -u www-data php ./index.php precompile-templates
+```
+
+Then, if you want to create or update a PO (Portable Object) file for a specific language, along with its MO (Machine Object) version, which is usually what you want, you need to run the following command in the root directory of your project (using the locale `mr-IN` as an example):
+
+```bash
+$ bash ./i18n.sh mr-IN
+```
+
+If you want a generic POT (Portable Object Template) file instead, just drop the locale code from the end:
+
+```bash
+$ bash ./i18n.sh
+```
+
+Now you can [translate](https://github.com/delight-im/PHP-I18N#translating-the-extracted-strings) the exported PO or POT files, either manually or using any tool or service you want. By running the commands listed above again, you can [compile](https://github.com/delight-im/PHP-I18N#exporting-translations-to-binary-format) the translated files to an updated binary version, after which you only need to restart your web server for the translations to appear in your application.
+
 ### Helpers and utilities
 
 The following helpers and utilities are available throughout your application code and in all templates:
