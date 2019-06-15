@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "96020a1ed7590e860e4dd85beea7fcc6",
+    "content-hash": "ad05ad7c1b83ba95638268448ac52ad2",
     "packages": [
         {
             "name": "delight-im/auth",
@@ -211,16 +211,16 @@
         },
         {
             "name": "delight-im/foundation-core",
-            "version": "v4.4.0",
+            "version": "v4.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delight-im/PHP-Foundation-Core.git",
-                "reference": "be9014ce4f1006e4aafb46e480a5ce7bb59e0be2"
+                "reference": "b1471d9b35db48c6be602735a5f365a66dcc81b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delight-im/PHP-Foundation-Core/zipball/be9014ce4f1006e4aafb46e480a5ce7bb59e0be2",
-                "reference": "be9014ce4f1006e4aafb46e480a5ce7bb59e0be2",
+                "url": "https://api.github.com/repos/delight-im/PHP-Foundation-Core/zipball/b1471d9b35db48c6be602735a5f365a66dcc81b0",
+                "reference": "b1471d9b35db48c6be602735a5f365a66dcc81b0",
                 "shasum": ""
             },
             "require": {
@@ -228,8 +228,9 @@
                 "delight-im/cookie": "^3.1",
                 "delight-im/db": "^1.2",
                 "delight-im/file-upload": "^1.2",
+                "delight-im/i18n": "^1.0",
                 "delight-im/ids": "^1.0",
-                "delight-im/router": "^3.1",
+                "delight-im/router": "^3.1.1",
                 "delight-im/str": "^2.4",
                 "ext-mbstring": "*",
                 "filp/whoops": "^2.1",
@@ -254,7 +255,7 @@
                 "bootstrap",
                 "framework"
             ],
-            "time": "2019-04-08T21:42:31+00:00"
+            "time": "2019-06-14T18:11:51+00:00"
         },
         {
             "name": "delight-im/http",
@@ -291,6 +292,50 @@
                 "https"
             ],
             "time": "2016-07-21T15:05:01+00:00"
+        },
+        {
+            "name": "delight-im/i18n",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/delight-im/PHP-I18N.git",
+                "reference": "ca1aea7df1be4170dada77b77e2482cd3f75a94b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/delight-im/PHP-I18N/zipball/ca1aea7df1be4170dada77b77e2482cd3f75a94b",
+                "reference": "ca1aea7df1be4170dada77b77e2482cd3f75a94b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gettext": "*",
+                "ext-intl": "*",
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Delight\\I18n\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Internationalization and localization for PHP",
+            "homepage": "https://github.com/delight-im/PHP-I18N",
+            "keywords": [
+                "gettext",
+                "i18n",
+                "internationalization",
+                "intl",
+                "l10n",
+                "language",
+                "locale",
+                "localization",
+                "translation"
+            ],
+            "time": "2019-06-10T17:46:02+00:00"
         },
         {
             "name": "delight-im/ids",
@@ -342,16 +387,16 @@
         },
         {
             "name": "delight-im/router",
-            "version": "v3.1.0",
+            "version": "v3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delight-im/PHP-Router.git",
-                "reference": "238ac8b540aba83ceebeb4b8e7f9bd11b48652ab"
+                "reference": "2dcb65715cfc69b4695f1a460317fc99d1d771d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delight-im/PHP-Router/zipball/238ac8b540aba83ceebeb4b8e7f9bd11b48652ab",
-                "reference": "238ac8b540aba83ceebeb4b8e7f9bd11b48652ab",
+                "url": "https://api.github.com/repos/delight-im/PHP-Router/zipball/2dcb65715cfc69b4695f1a460317fc99d1d771d2",
+                "reference": "2dcb65715cfc69b4695f1a460317fc99d1d771d2",
                 "shasum": ""
             },
             "require": {
@@ -375,7 +420,7 @@
                 "router",
                 "routing"
             ],
-            "time": "2016-12-23T22:45:42+00:00"
+            "time": "2019-06-14T12:33:23+00:00"
         },
         {
             "name": "delight-im/str",
