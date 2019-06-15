@@ -588,6 +588,12 @@ The following helpers and utilities are available throughout your application co
  * `$app->getCanonicalHost()` (`app.getCanonicalHost()` in templates)
  * `$app->getHost()` (`app.getHost()` in templates)
  * `$app->getClientIp()` (`app.getClientIp()` in templates)
+ * `$app->isClientLoopback()` (`app.isClientLoopback()` in templates)
+ * `$app->isClientCli()`
+ * `$app->hasCliArgument()`
+ * `$app->hasCliArgument($position)`
+ * `$app->getCliArgument()`
+ * `$app->getCliArgument($position)`
  * `$app->isHttp()`
  * `$app->isHttps()`
  * `$app->getProtocol()`
