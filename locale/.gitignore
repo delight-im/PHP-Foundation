@@ -1,0 +1,4 @@
+# Ignore MO (Machine Object) files
+*.mo
+# Ignore POT (Portable Object Template) files
+*.pot

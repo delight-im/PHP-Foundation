@@ -96,5 +96,27 @@ $app->setContentType('html');
 \define('TYPE_TEXT', \Delight\Foundation\Input::DATA_TYPE_TEXT);
 \define('TYPE_RAW', \Delight\Foundation\Input::DATA_TYPE_RAW);
 
+// reluctantly put some functions into the global namespace for maximum convenience
+function _f($text, ...$replacements) { global $app; return $app->i18n()->translateFormatted($text, ...$replacements); }
+function _fe($text, ...$replacements) { global $app; return $app->i18n()->translateFormattedExtended($text, ...$replacements); }
+function _p($text, $alternative, $count) { global $app; return $app->i18n()->translatePlural($text, $alternative, $count); }
+function _pf($text, $alternative, $count, ...$replacements) { global $app; return $app->i18n()->translatePluralFormatted($text, $alternative, $count, ...$replacements); }
+function _pfe($text, $alternative, $count, ...$replacements) { global $app; return $app->i18n()->translatePluralFormattedExtended($text, $alternative, $count, ...$replacements); }
+function _c($text, $context) { global $app; return $app->i18n()->translateWithContext($text, $context); }
+function _m($text) { global $app; return $app->i18n()->markForTranslation($text); }
+
+if ($app->isClientCli() || $app->isClientLoopback()) {
+	if ($app->hasCliArgument()) {
+		if ($app->getCliArgument() === 'clear-template-cache') {
+			$app->clearTemplateCache();
+			exit;
+		}
+		elseif ($app->getCliArgument() === 'precompile-templates') {
+			$app->precompileTemplates();
+			exit;
+		}
+	}
+}
+
 // include the actual application code
 require __DIR__ . '/app/index.php';
