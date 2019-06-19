@@ -434,7 +434,7 @@ The best language for the client is usually detected and applied automatically (
 
 Optionally, if you want to store the currently selected language in the session or in a cookie, you can define the key or name to use in your configuration in `config/.env`:
 
-```
+```bash
 I18N_SESSION_FIELD=language
 # and / or
 I18N_COOKIE_NAME=lang
