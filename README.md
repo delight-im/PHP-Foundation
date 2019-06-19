@@ -436,6 +436,7 @@ Optionally, if you want to store the currently selected language in the session 
 
 ```
 I18N_SESSION_FIELD=language
+# and / or
 I18N_COOKIE_NAME=lang
 ```
 
