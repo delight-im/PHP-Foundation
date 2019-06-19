@@ -432,7 +432,7 @@ Some of the locales you want to use may not be installed on your local machine o
 
 The best language for the client is usually detected and applied automatically (from the HTTP header `Accept-Language` that is sent by the client), but you may select a language manually by supplying it in a subdomain (e.g. `da-DK.example.com`), in a path prefix (e.g. `http://www.example.com/pt-BR/welcome.html`), or as a parameter in the query string (as `locale`, `language`, `lang` or `lc`).
 
-Optionally, if you want to keep the currently selected language stored in the session or in a cookie, you can define the key or name to use for persistence in your configuration in `config/.env`:
+Optionally, if you want to store the currently selected language in the session or in a cookie, you can define the key or name to use in your configuration in `config/.env`:
 
 ```
 I18N_SESSION_FIELD=language
@@ -441,7 +441,7 @@ I18N_COOKIE_NAME=lang
 
 You can always check the currently active locale for a client using `$app->i18n()->getLocale()` in your application code or using `app.i18n().getLocale()` in your templates. Apart from that, there are many other [helpers and utilities](https://github.com/delight-im/PHP-I18N#information-about-locales) available that let you access names and other information for your set of locales.
 
-Next, you need to identify and mark all strings that can be translated. For an existing application, this might require some more effort, but you can start with only a few strings, of course.
+Next, you need to identify and mark all strings in your code that can be translated. For an existing application, this might require some more effort, but you can start with only a few strings, of course.
 
 This allows for the marked strings to be extracted automatically, so that they can be translated outside of the actual code, before being inserted again automatically during runtime.
 
@@ -551,16 +551,16 @@ This allows for the marked strings to be extracted automatically, so that they c
      $title = _m('Profile picture');
      ```
 
-Finally, after having identified and marked some (or all) strings for translation in your application code and your templates, you can use the built-in tools to extract the strings automatically.
+Finally, after having identified and marked some (or all) strings for translation in your application code and in your templates, you can use the built-in tools to extract the strings automatically.
 
-To allow for the extraction of the strings from your templates, refresh and replace the cached versions of your template files by running the following two commands in the root directory:
+To allow for the extraction of the strings from your templates, refresh and replace the cached versions of your template files by running the following two commands in the root directory of your project:
 
 ```bash
 $ sudo -u www-data php ./index.php clear-template-cache
 $ sudo -u www-data php ./index.php precompile-templates
 ```
 
-Then, if you want to create or update a PO (Portable Object) file for a specific language, along with its MO (Machine Object) version, which is usually what you want, you need to run the following command in the root directory of your project (using the locale `mr-IN` as an example):
+Then, if you want to create or update a PO (Portable Object) file for a specific language, along with its MO (Machine Object) version, which is usually what you want, you need to run the following command in the root directory of the project (using the locale `mr-IN` as an example):
 
 ```bash
 $ bash ./i18n.sh mr-IN
