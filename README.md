@@ -54,6 +54,26 @@ There are no DSLs or pseudo-languages that you need to learn (except [Twig](view
 
 ## Usage
 
+ * [Application structure](#application-structure)
+ * [Routing](#routing)
+ * [Charsets and encodings](#charsets-and-encodings)
+ * [Storage](#storage)
+ * [Database access](#database-access)
+ * [String handling](#string-handling)
+ * [Input validation](#input-validation)
+ * [HTML escaping](#html-escaping)
+ * [Templates](#templates)
+ * [Authentication](#authentication)
+ * [Sessions and cookies](#sessions-and-cookies)
+ * [Flash messages](#flash-messages)
+ * [Mail](#mail)
+ * [Obfuscation of IDs](#obfuscation-of-ids)
+ * [Uploading files](#uploading-files)
+ * [Serving files](#serving-files)
+ * [File downloads](#file-downloads)
+ * [Internationalization (I18N) and localization (L10N)](#internationalization-i18n-and-localization-l10n)
+ * [Helpers and utilities](#helpers-and-utilities)
+
 ### Application structure
 
  * `app/`: This is the most important directory: It’s where you’ll write all your PHP code. It’s entirely up to you how you structure your application in this directory. Create as many files and subdirectories here as you wish. The `index.php` file is the main entry point to your application. The complete folder is exclusively for you.
