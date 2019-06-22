@@ -599,9 +599,9 @@ Now you can [translate](https://github.com/delight-im/PHP-I18N#translating-the-e
 
 The following helpers and utilities are available throughout your application code and in all templates:
 
- * `$app->url($toPath)` (`app.url($toPath)` in templates)
- * `$app->urlWithLang($toPath)` (`app.urlWithLang($toPath)` in templates)
- * `$app->urlWithParams($toPath, $params)` (`app.urlWithParams($toPath, $params)` in templates)
+ * `$app->url($toPath)` (`app.url(toPath)` in templates)
+ * `$app->urlWithLang($toPath)` (`app.urlWithLang(toPath)` in templates)
+ * `$app->urlWithParams($toPath, $params)` (`app.urlWithParams(toPath, params)` in templates)
  * `$app->redirect($toPath)`
  * `$app->setStatus($code)`
  * `$app->setContentType($type)`
@@ -609,7 +609,7 @@ The following helpers and utilities are available throughout your application co
  * `$app->currentRoute()` (`app.currentRoute()` in templates)
  * `$app->currentUrl()` (`app.currentUrl()` in templates)
  * `$app->currentUrlWithLang()` (`app.currentUrlWithLang()` in templates)
- * `$app->currentUrlWithParams($params)` (`app.currentUrlWithParams($params)` in templates)
+ * `$app->currentUrlWithParams($params)` (`app.currentUrlWithParams(params)` in templates)
  * `$app->getCanonicalHost()` (`app.getCanonicalHost()` in templates)
  * `$app->getHost()` (`app.getHost()` in templates)
  * `$app->getClientIp()` (`app.getClientIp()` in templates)
