@@ -587,6 +587,8 @@ Then, if you want to create or update a PO (Portable Object) file for a specific
 $ bash ./i18n.sh mr-IN
 ```
 
+**Note:** On Windows 10+, this command can be used by enabling the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). Then, inside WSL, run `sudo apt-get install gettext`, `sudo apt-get install dos2unix` and `dos2unix i18n.sh` before being able to use the command.
+
 If you want a generic POT (Portable Object Template) file instead, just drop the locale code from the end:
 
 ```bash
