@@ -605,9 +605,11 @@ The following helpers and utilities are available throughout your application co
  * `$app->urlWithLang($toPath)` (`app.urlWithLang(toPath)` in templates)
  * `$app->urlWithParams($toPath, $params)` (`app.urlWithParams(toPath, params)` in templates)
  * `$app->redirect($toPath)`
+ * `$app->redirectToUrl($toUrl)`
  * `$app->setStatus($code)`
  * `$app->setContentType($type)`
  * `$app->flash()` (`app.flash()` in templates)
+ * `$app->isDebug()` (`app.isDebug()` in templates)
  * `$app->currentRoute()` (`app.currentRoute()` in templates)
  * `$app->currentUrl()` (`app.currentUrl()` in templates)
  * `$app->currentUrlWithLang()` (`app.currentUrlWithLang()` in templates)
@@ -617,7 +619,9 @@ The following helpers and utilities are available throughout your application co
  * `$app->currentUrlWithQueryAndParams($params)` (`app.currentUrlWithQueryAndParams(params)` in templates)
  * `$app->getCanonicalHost()` (`app.getCanonicalHost()` in templates)
  * `$app->getHost()` (`app.getHost()` in templates)
+ * `$app->getReferrer()` (`app.getReferrer()` in templates)
  * `$app->getClientIp()` (`app.getClientIp()` in templates)
+ * `$app->getUa()` (`app.getUa()` in templates)
  * `$app->isClientLoopback()` (`app.isClientLoopback()` in templates)
  * `$app->isClientCli()`
  * `$app->hasCliArgument()`
