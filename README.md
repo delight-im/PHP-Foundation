@@ -622,18 +622,25 @@ The following helpers and utilities are available throughout your application co
  * `$app->getReferrer()` (`app.getReferrer()` in templates)
  * `$app->getClientIp()` (`app.getClientIp()` in templates)
  * `$app->getUa()` (`app.getUa()` in templates)
+ * `$app->isBotAgent()` (`app.isBotAgent()` in templates)
  * `$app->isClientLoopback()` (`app.isClientLoopback()` in templates)
  * `$app->isClientCli()`
  * `$app->hasCliArgument()`
  * `$app->hasCliArgument($position)`
  * `$app->getCliArgument()`
  * `$app->getCliArgument($position)`
+ * `$app->isSameSiteRequest()` (`app.isSameSiteRequest()` in templates)
  * `$app->isHttp()`
  * `$app->isHttps()`
  * `$app->getProtocol()`
  * `$app->getPort()`
  * `$app->getQueryString()`
  * `$app->getRequestMethod()`
+ * `$app->getUtmSource()` (`app.getUtmSource()` in templates)
+ * `$app->getUtmMedium()` (`app.getUtmMedium()` in templates)
+ * `$app->getUtmCampaign()` (`app.getUtmCampaign()` in templates)
+ * `$app->getUtmTerm()` (`app.getUtmTerm()` in templates)
+ * `$app->getUtmContent()` (`app.getUtmContent()` in templates)
 
 ## Backups
 
