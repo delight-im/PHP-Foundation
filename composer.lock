@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ac47bdb23bb54af7b58030eeed22974e",
+    "content-hash": "9cb5638e108cff706b9105be13711414",
     "packages": [
         {
             "name": "delight-im/auth",
-            "version": "v8.2.0",
+            "version": "v8.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delight-im/PHP-Auth.git",
-                "reference": "dcd893a12cbf9fb9bb64fa966944e88f1963d141"
+                "reference": "157a7095b0a4e12246923449e6083212438fc071"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delight-im/PHP-Auth/zipball/dcd893a12cbf9fb9bb64fa966944e88f1963d141",
-                "reference": "dcd893a12cbf9fb9bb64fa966944e88f1963d141",
+                "url": "https://api.github.com/repos/delight-im/PHP-Auth/zipball/157a7095b0a4e12246923449e6083212438fc071",
+                "reference": "157a7095b0a4e12246923449e6083212438fc071",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 "login",
                 "security"
             ],
-            "time": "2020-04-20T19:36:08+00:00"
+            "time": "2020-05-06T20:36:45+00:00"
         },
         {
             "name": "delight-im/base64",
@@ -211,16 +211,16 @@
         },
         {
             "name": "delight-im/foundation-core",
-            "version": "v4.13.0",
+            "version": "v4.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/delight-im/PHP-Foundation-Core.git",
-                "reference": "a37d1b9ffa61af37cf2d6955a3940b3771b1f315"
+                "reference": "f39ff133b94ed433bbb10c27a8e420c8ba815cf9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/delight-im/PHP-Foundation-Core/zipball/a37d1b9ffa61af37cf2d6955a3940b3771b1f315",
-                "reference": "a37d1b9ffa61af37cf2d6955a3940b3771b1f315",
+                "url": "https://api.github.com/repos/delight-im/PHP-Foundation-Core/zipball/f39ff133b94ed433bbb10c27a8e420c8ba815cf9",
+                "reference": "f39ff133b94ed433bbb10c27a8e420c8ba815cf9",
                 "shasum": ""
             },
             "require": {
@@ -255,7 +255,7 @@
                 "bootstrap",
                 "framework"
             ],
-            "time": "2020-04-28T17:40:21+00:00"
+            "time": "2020-07-05T13:44:47+00:00"
         },
         {
             "name": "delight-im/http",
